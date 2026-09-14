@@ -1,5 +1,3 @@
-#!/bin/bash
-cat > README.md << 'README_END'
 # Playwright Python Automation Framework
 
 An end-to-end UI test automation project built with **Playwright**, **Python**, and **pytest**, using the **Page Object Model (POM)** design pattern. The test covers the full user journey on [saucedemo.com](https://www.saucedemo.com) — login, adding an item to the cart, and completing checkout.
@@ -22,14 +20,6 @@ An end-to-end UI test automation project built with **Playwright**, **Python**, 
 
 ## Project structure
 
-```
-checkout_flow/
-├── first_login.py       # Login page object
-├── add_cart.py           # Inventory / add-to-cart page object
-├── checkout_page.py      # Checkout button page object
-├── checkout_info.py      # Checkout info form + order completion
-└── login_data.py         # End-to-end test: login → cart → checkout
-```
 
 ## Setup
 
@@ -78,5 +68,3 @@ Each step includes an assertion confirming the correct page was reached — not 
 ## Author
 
 Hajra Abbasi — QA Tester transitioning into automation testing.
-README_END
-echo "README.md written successfully."
