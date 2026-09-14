@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # Playwright Python Automation Framework
 
 An end-to-end UI test automation project built with **Playwright**, **Python**, and **pytest**, using the **Page Object Model (POM)** design pattern. The test covers the full user journey on [saucedemo.com](https://www.saucedemo.com) — login, adding an item to the cart, and completing checkout.
@@ -70,4 +69,3 @@ Each step includes an assertion confirming the correct page was reached — not 
 ## Author
 
 Hajra Abbasi — QA Tester transitioning into automation testing.
->>>>>>> dc366e364c62d550fed430f1f203579b402424b1
