@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Playwright Python Automation Framework
 
 An end-to-end UI test automation project built with **Playwright**, **Python**, and **pytest**, using the **Page Object Model (POM)** design pattern. The test covers the full user journey on [saucedemo.com](https://www.saucedemo.com) — login, adding an item to the cart, and completing checkout.
@@ -11,6 +9,7 @@ An end-to-end UI test automation project built with **Playwright**, **Python**, 
 - End-to-end flow automation: login → add to cart → checkout → order confirmation
 - Assertions at every step of the flow, not just at the end
 - HTML test reporting
+- Visual regression testing with screenshot comparison
 
 ## Tech stack
 
@@ -19,23 +18,16 @@ An end-to-end UI test automation project built with **Playwright**, **Python**, 
 - **pytest** — test runner and framework
 - **pytest-playwright** — Playwright/pytest integration
 - **pytest-html** — HTML test reports
-
-## Project structure
-
+- **pytest-playwright-visual** — visual regression testing
 
 ## Setup
 
 ```bash
-# Clone the repo
 git clone https://github.com/hajramurtaza23-sketch/playwright-python-automation.git
 cd playwright-python-automation
-
-# Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
-
-# Install dependencies
-pip install pytest-playwright pytest-html
+pip install pytest-playwright pytest-html pytest-playwright-visual
 playwright install
 playwright install-deps
 ```
@@ -43,31 +35,12 @@ playwright install-deps
 ## Running the tests
 
 ```bash
-# Run the full checkout flow test
 pytest checkout_flow/login_data.py -v
-
-# Run with the browser visible
 pytest checkout_flow/login_data.py -v --headed
-
-# Generate an HTML report
 pytest checkout_flow/login_data.py --html=report.html --self-contained-html
+pytest checkout_flow/test_visual.py -v
 ```
-
-## What the test covers
-
-The end-to-end test (`checkout_flow/login_data.py`) verifies:
-
-1. Successful login with valid credentials
-2. Landing on the correct inventory page
-3. Adding an item to the cart
-4. Navigating to the cart page
-5. Proceeding through checkout
-6. Filling in checkout information
-7. Completing the order and confirming the success page
-
-Each step includes an assertion confirming the correct page was reached — not just that a click happened.
 
 ## Author
 
 Hajra Abbasi — QA Tester transitioning into automation testing.
->>>>>>> dc366e364c62d550fed430f1f203579b402424b1
